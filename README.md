@@ -2,7 +2,7 @@
 
 ## 项目运行
 ```
-yarn install
+yarn add
 yarn serve
 ```
 
