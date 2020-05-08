@@ -1,7 +1,7 @@
 <template>
-  <div class="container_button" @click="btnClick" :style="getStyle()">
+  <button class="container_button" @click="btnClick" :style="getStyle()">
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -28,11 +28,23 @@ export default {
 
 <style lang="less" scoped>
 .container_button {
-  border-radius: 4px;
-  background-color: pink;
-
-  display: table-cell;
-  vertical-align: middle;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  box-shadow: none;
+  text-shadow: none;
+  display: inline-block;
   text-align: center;
+  align-items: flex-start;
+  border: none;
+
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-radius: 10px;
+  border-image: initial;
 }
 </style>
