@@ -12,9 +12,9 @@ yarn serve
 
 ```html
 <template>
-  <div class="container_button" @click="btnClick" :style="getStyle()">
+  <button class="container_button" @click="btnClick" :style="getStyle()">
     <slot></slot>
-  </div>
+  </button>
 </template>
 
 <script>
@@ -41,12 +41,24 @@ export default {
 
 <style lang="less" scoped>
 .container_button {
-  border-radius: 4px;
-  background-color: pink;
-
-  display: table-cell;
-  vertical-align: middle;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  box-shadow: none;
+  text-shadow: none;
+  display: inline-block;
   text-align: center;
+  align-items: flex-start;
+  border: none;
+
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-radius: 10px;
+  border-image: initial;
 }
 </style>
 ```
@@ -57,11 +69,10 @@ export default {
 <template>
   <div class="home">
     <img class="img" alt="Vue logo" src="../assets/logo.png" />
-    <span>这是span</span>
+    <h1>这是h1</h1>
+    <span style="margin-right:20px">这是span1</span>
     <Button @click="btnClcik" class="btnstyle">按钮</Button>
-    <span style="border:1px solid #000">这是span1</span>
-    <span style="border:1px solid #000">这是span2</span>
-    <div style="border:1px solid #000">这是div</div>
+    <span style="border:1px solid #000;margin-left:20px">这是span2</span>
   </div>
 </template>
 
@@ -85,10 +96,14 @@ export default {
   margin: 0 auto;
 }
 .btnstyle {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+  // background-image: url('../assets/logo.png');
+  border: 1px solid #000;
+  font-size: 20px;
 }
 </style>
+
 ```
 
 ### 样式
@@ -98,8 +113,4 @@ export default {
 ### 方法
 
 可以通过在 `home.vue` 中引入的 `Button` 组件添加事件 `click` 来定义点击按钮之后触发的事件
-
-### 问题
-
-`Button` 组件属于块元素，使用时需注意按钮的位置
 

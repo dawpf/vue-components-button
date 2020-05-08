@@ -32,6 +32,6 @@ export default {
   height: 200px;
   // background-image: url('../assets/logo.png');
   border: 1px solid #000;
-  // font-size: 20px;
+  font-size: 20px;
 }
 </style>
